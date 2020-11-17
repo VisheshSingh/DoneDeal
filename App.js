@@ -6,6 +6,7 @@ import {
   View,
   Image,
   TouchableHighlight,
+  Button,
 } from 'react-native';
 
 export default function App() {
@@ -29,6 +30,11 @@ export default function App() {
           fadeDuration={1000}
         />
       </TouchableHighlight>
+      <Button
+        title='Click me'
+        onPress={() => console.log('button pressed')}
+        color='coral'
+      />
     </View>
   );
 }
