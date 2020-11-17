@@ -7,6 +7,7 @@ import {
   Image,
   TouchableHighlight,
   Button,
+  Alert,
 } from 'react-native';
 
 export default function App() {
@@ -32,7 +33,12 @@ export default function App() {
       </TouchableHighlight>
       <Button
         title='Click me'
-        onPress={() => console.log('button pressed')}
+        onPress={() =>
+          Alert.alert('Title', 'Description', [
+            { text: 'Yes', onPress: () => console.log('Yes!') },
+            { text: 'No', onPress: () => console.log('No!') },
+          ])
+        }
         color='coral'
       />
     </View>
