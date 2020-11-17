@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 
 export default function App() {
   const handlePress = () => {
@@ -8,10 +8,20 @@ export default function App() {
   };
   return (
     <View style={styles.container}>
+      <StatusBar style='auto' />
       <Text numberOfLines={1} onPress={handlePress}>
-        Open up App.js to start working on your app! This can be even longer and
-        longer which goes beyond one line
+        Hello React native
       </Text>
+      <Image source={require('./assets/favicon.png')} />
+      <Image
+        source={{
+          uri: 'https://picsum.photos/id/1/200/300',
+          width: 200,
+          height: 200,
+        }}
+        fadeDuration={1000}
+        blurRadius={1}
+      />
     </View>
   );
 }
