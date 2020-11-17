@@ -17,10 +17,10 @@ export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style='auto' />
-      <Text numberOfLines={1} onPress={handlePress}>
+      <Text numberOfLines={1} onPress={handlePress} style={{ padding: 10 }}>
         Hello React native
       </Text>
-      <Image source={require('./assets/favicon.png')} />
+      <Image source={require('./assets/favicon.png')} style={{ margin: 10 }} />
       <TouchableHighlight onPress={() => console.log('Image pressed!')}>
         <Image
           source={{
@@ -29,6 +29,8 @@ export default function App() {
             height: 200,
           }}
           fadeDuration={1000}
+          borderRadius={10}
+          style={styles.imageStyle}
         />
       </TouchableHighlight>
       <Button
@@ -51,5 +53,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  imageStyle: {
+    margin: 20,
   },
 });
