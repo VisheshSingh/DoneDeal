@@ -8,9 +8,11 @@ import {
   TouchableHighlight,
   Button,
   Alert,
+  Dimensions,
 } from 'react-native';
 
 export default function App() {
+  console.log(Dimensions.get('screen'));
   const handlePress = () => {
     console.log('Text Pressed!');
   };
